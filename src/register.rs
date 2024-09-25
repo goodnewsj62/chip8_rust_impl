@@ -46,13 +46,3 @@ impl MemoryTrait for EightBitRegister {
         self.0 ^= self.mask(position);
     }
 }
-
-// pub  struct SixteenBitRegister([EightBitRegister; 2]);
-//TODO: all bigger register or memory can be created generically using a struct that stores a vector of 8 bit register
-// Memory::new(16) 16/8 = 2 then vec![EightBitRegister::new(),  EightBitRegister::new()]
-// Memory.0[pos / 8 ] &= (1 << (pos % 8))
-// impl SixteenBitRegister {
-//     fn new()->Self {
-//         [EightBitRegister::new(),  EightBitRegister::new()]
-//     }
-// }

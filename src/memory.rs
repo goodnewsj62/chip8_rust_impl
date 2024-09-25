@@ -1,4 +1,4 @@
-use crate::register::{self, EightBitRegister};
+use crate::register;
 
 pub struct Memory {
     pub data: Vec<register::EightBitRegister>,
@@ -6,7 +6,7 @@ pub struct Memory {
 }
 
 impl Memory {
-    fn create(bytes: usize) -> Self {
+    pub fn create(bytes: usize) -> Self {
         let slots = (bytes as f32 / 8_f32).round() as usize;
 
         Memory {
